@@ -1,11 +1,8 @@
 #include "main.h"
 #include <stdlib.h>
-
-
 /**
  * check_for_specifiers - checks if there is a valid format specifier
  * @format: possible format specifier
- *
  * Return: pointer to valid function or NULL
  */
 static int (*check_for_specifiers(const char *format))(va_list)
@@ -42,7 +39,6 @@ static int (*check_for_specifiers(const char *format))(va_list)
 /**
  * _printf - prints anything
  * @format: list of argument types passed to the function
- *
  * Return: number of characters printed
  */
 int _printf(const char *format, ...)
