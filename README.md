@@ -1,6 +1,6 @@
 PROJECT CONTRIBUTERS
 
-David Ametoworbla
+David Ametorwobla
 
 Irene Allotey
 
