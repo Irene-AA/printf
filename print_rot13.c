@@ -4,13 +4,12 @@
 /**
  * print_R - prints a string in rot13
  * @R: string to print
- *
  * Return: number of chars printed
  */
 int print_R(va_list R)
 {
 	char *str;
-	unsigned int i, j;
+	unsigned int a, b;
 	int count = 0;
 	char in[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char out[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
@@ -18,20 +17,20 @@ int print_R(va_list R)
 	str = va_arg(R, char *);
 	if (str == NULL)
 		str = "(ahyy)";
-	for (i = 0; str[i]; i++)
+	for (a = 0; str[a]; a++)
 	{
-		for (j = 0; in[j]; j++)
+		for (b = 0; in[b]; b++)
 		{
-			if (in[j] == str[i])
+			if (in[b] == str[a])
 			{
-				_putchar(out[j]);
+				_putchar(out[b]);
 				count++;
 				break;
 			}
 		}
-		if (!in[j])
+		if (!in[b])
 		{
-			_putchar(str[i]);
+			_putchar(str[a]);
 			count++;
 		}
 	}
